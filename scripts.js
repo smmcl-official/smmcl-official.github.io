@@ -1,4 +1,4 @@
-const mainWebsiteURL = "hjttps://sims-7tap.onrender.com/";
+const mainWebsiteURL = "https://sims-7tap.onrender.com/";
 const scienceFacts = [
     "The Earth is not perfectly round, but an oblate spheroid.",
     "The human brain is the most energy-consuming organ, using about 20% of the body's energy.",
@@ -23,18 +23,18 @@ const scienceFacts = [
 ];
 
 const tipElement = document.getElementById("tip");
-let currentFactIndex = 0;
 
-function showNextFact() {
-    tipElement.textContent = scienceFacts[currentFactIndex];
-    currentFactIndex = (currentFactIndex + 1) % scienceFacts.length; // Cycle through the facts
+function showRandomFact() {
+    const randomIndex = Math.floor(Math.random() * scienceFacts.length);
+    tipElement.textContent = scienceFacts[randomIndex];
 }
 
 function redirect() {
-    window.location.href = mainWebsiteURL;
+    setTimeout(() => {
+        window.location.href = mainWebsiteURL;
+    }, 2000);
 }
 
-// Check if the main website is loaded
 function checkWebsiteStatus() {
     fetch(mainWebsiteURL, { mode: 'no-cors' })
         .then(response => {
@@ -46,9 +46,8 @@ function checkWebsiteStatus() {
         });
 }
 
-// Show the first fact immediately, then change it every 5 seconds
-showNextFact();
-setInterval(showNextFact, 5000);
+// Show a random fact immediately
+showRandomFact();
+setInterval(showRandomFact, 5000); // Continue showing random facts every 5 seconds
 
-// Start checking website status
 checkWebsiteStatus();
