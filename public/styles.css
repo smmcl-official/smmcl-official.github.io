@@ -1,0 +1,28 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#message {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#tip {
+    font-size: 14px;
+    color: #666;
+}
