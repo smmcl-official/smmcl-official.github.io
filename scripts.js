@@ -50,5 +50,4 @@ function checkWebsiteStatus() {
 showRandomFact();
 setInterval(showRandomFact, 5000); // Continue showing random facts every 5 seconds
 
-
 checkWebsiteStatus();
