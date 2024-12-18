@@ -1,4 +1,4 @@
-const mainWebsiteURL = "https://sims-7tap.onrender.com/";
+const mainWebsiteURL = "hjttps://sims-7tap.onrender.com/";
 const scienceFacts = [
     "The Earth is not perfectly round, but an oblate spheroid.",
     "The human brain is the most energy-consuming organ, using about 20% of the body's energy.",
