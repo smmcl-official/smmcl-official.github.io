@@ -50,44 +50,37 @@ body {
 .note {
     color: #7f8c8d;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-.status-section {
+.status-container {
+    margin: 1.5rem 0;
     padding: 1rem;
-    border-top: 1px solid #ecf0f1;
-    margin-top: 0.5rem;
-}
-
-.status-text {
-    color: #7f8c8d;
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+    border-radius: 10px;
+    background-color: #f8f9fa;
 }
 
 .status-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.6rem 1.2rem;
-    background-color: #f8f9fa;
-    color: #2c3e50;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #000080;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
-    border: 1px solid #e9ecef;
-    transition: all 0.3s ease;
     font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid #000080;
 }
 
 .status-button:hover {
-    background-color: #e9ecef;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: #000080;
 }
 
-.status-icon {
-    margin-left: 0.5rem;
-    font-size: 1rem;
+.status-note {
+    color: #666;
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
 }
 
 #tip {
@@ -136,7 +129,17 @@ body {
         font-size: 1rem;
     }
     
-    .note, #tip, .status-text, .status-button {
+    .note, #tip {
         font-size: 0.8rem;
+    }
+    
+    .status-button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.8rem;
+    }
+    
+    .status-container {
+        padding: 0.8rem;
+        margin: 1rem 0;
     }
 }
