@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
     padding: 20px;
+    overflow: hidden; 
 }
 
 .container {
@@ -22,6 +23,7 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-width: 90%;
     width: 500px;
+    /* Animation will be added when website is confirmed up */
 }
 
 .logo {
@@ -39,6 +41,7 @@ body {
     border-top: 4px solid #000080;
     border-radius: 50%;
     animation: spin 1s linear infinite;
+    transition: opacity 0.2s ease-in-out; /* Add transition for opacity */
 }
 
 .message {
@@ -141,5 +144,25 @@ body {
     .status-container {
         padding: 0.8rem;
         margin: 1rem 0;
+    }
+}
+
+/* Animation for zooming in and fading */
+.zoom-in-fade-out {
+    animation: zoomInFadeOut 0.1s ease-in-out forwards; /* Further shortened duration */
+}
+
+.zoom-in-fade-out .loading-indicator {
+    opacity: 0; /* Loading indicator fades out with container */
+}
+
+@keyframes zoomInFadeOut {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1); /* Reduced zoom */
+        opacity: 0; /* Fully fade out */
     }
 }
